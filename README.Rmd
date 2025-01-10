@@ -1,0 +1,39 @@
+---
+output: github_document
+html_preview: true
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# AquaPI `r as.character(read.dcf("DESCRIPTION", "Version"))`
+
+<!-- badges: start -->
+[![img](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+<!-- badges: end -->
+
+The goal of AquaPI is to provide an API wrapper for Aquarius time-series data. Package is in very early testing stages. 
+
+## Installation
+
+You can install the development version of AquaPI like so:
+
+``` {r, message=FALSE, results=FALSE}
+# install.packages("devtools") # if not already installed
+
+#library(devtools)
+#install_github("karharker/AquaPI")
+```
+
+
