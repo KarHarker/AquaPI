@@ -13,7 +13,7 @@ data. Package is in very early testing stages.
 
 ## Installation
 
-You can install the development version of AquaPI like so:
+You can install the development version of AquaPI here:
 
 ``` r
 # install.packages("devtools") # if not already installed
