@@ -32,3 +32,34 @@ retrieve_ts_ids <- function(site, username, password, output = c("list", "datafr
     ts_id
   }
 }
+
+
+
+#' Retrieve the approval status and the change in approvals over time by timeseries
+#'
+#' @param sample_ts The unique ID of a timeseries (several within each site)
+#' @param username API username required
+#' @param password API password required
+#'
+#' @returns A dataframe with approval levels and date of approval level change by unique timeseries id
+#' @export
+#'
+#' @examples extract_appr <- retrieve_approvals(
+#'   sample_ts = "8a0ed03b7fad4a40904122d3b6d0086f",
+#'   "username", "password"
+#' )
+#'
+retrieve_approvals <- function(sample_ts, username, password) {
+  approval_url <- paste0("GetApprovalsTransactionList?TimeSeriesUniqueId=", sample_ts)
+
+  approval_data <- httr2::api_req(approval_url, username, password)
+
+  appr_ts_data <- approval_data |>
+    httr2::req_perform() |>
+    httr2::resp_body_json(simplifyVector = TRUE) |>
+    purrr::pluck("ApprovalsTransactions") |>
+    tibble::as_tibble() |>
+    dplyr::mutate(UniqueId = sample_ts, .before = 1)
+
+  appr_ts_data
+}

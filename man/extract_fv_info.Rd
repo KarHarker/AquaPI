@@ -21,6 +21,6 @@ and number of site visits conducted each year.
 Retrieves field visit dataset that provides information on length of time for user upload
 }
 \examples{
-field_data = extract_fv_info("08MH0041", "username", "password")
+field_data <- extract_fv_info("08MH0041", "username", "password")
 
 }

@@ -8,7 +8,7 @@
 #' and number of site visits conducted each year.
 #' @export
 #'
-#' @examples field_data = extract_fv_info("08MH0041", "username", "password")
+#' @examples field_data <- extract_fv_info("08MH0041", "username", "password")
 #'
 extract_fv_info <- function(site, username, password) {
   fv_url <- "GetFieldVisitDataByLocation"

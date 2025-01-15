@@ -18,6 +18,6 @@ You can install the development version of AquaPI here:
 ``` r
 # install.packages("devtools") # if not already installed
 
-#library(devtools)
-#install_github("karharker/AquaPI")
+# library(devtools)
+# install_github("karharker/AquaPI")
 ```

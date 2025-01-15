@@ -2,4 +2,5 @@
 
 export(api_req)
 export(extract_fv_info)
+export(retrieve_approvals)
 export(retrieve_ts_ids)

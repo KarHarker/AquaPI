@@ -16,3 +16,5 @@ Imports:
     purrr,
     tibble,
     tidyr
+URL: https://github.com/KarHarker/AquaPI
+BugReports: https://github.com/KarHarker/AquaPI/issues
