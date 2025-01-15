@@ -52,7 +52,7 @@ retrieve_ts_ids <- function(site, username, password, output = c("list", "datafr
 retrieve_approvals <- function(sample_ts, username, password) {
   approval_url <- paste0("GetApprovalsTransactionList?TimeSeriesUniqueId=", sample_ts)
 
-  approval_data <- httr2::api_req(approval_url, username, password)
+  approval_data <- api_req(approval_url, username, password)
 
   appr_ts_data <- approval_data |>
     httr2::req_perform() |>
